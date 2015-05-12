@@ -65,6 +65,10 @@ type DecoderConfig struct {
 	// The tag name that mapstructure reads for field names. This
 	// defaults to "mapstructure"
 	TagName string
+
+	// AlwaysSquash is the equivalent of adding the "squash" tag to all
+	// embedded structs
+	AlwaysSquash bool
 }
 
 // A Decoder takes a raw interface value and turns it into structured
@@ -579,11 +583,15 @@ func (d *Decoder) decodeStruct(name string, data interface{}, val reflect.Value)
 				// We have an embedded field. We "squash" the fields down
 				// if specified in the tag.
 				squash := false
-				tagParts := strings.Split(fieldType.Tag.Get(d.config.TagName), ",")
-				for _, tag := range tagParts[1:] {
-					if tag == "squash" {
-						squash = true
-						break
+				if d.config.AlwaysSquash {
+					squash = true
+				} else {
+					tagParts := strings.Split(fieldType.Tag.Get(d.config.TagName), ",")
+					for _, tag := range tagParts[1:] {
+						if tag == "squash" {
+							squash = true
+							break
+						}
 					}
 				}
 
