@@ -1,6 +1,6 @@
 # mapstructure
 
-[![Build Status](https://travis-ci.org/hectorj/mapstructure.svg?branch=master)](https://travis-ci.org/hectorj/mapstructure)
+[![Build Status](https://travis-ci.org/hectorj/mapstructure.svg?branch=master)](https://travis-ci.org/hectorj/mapstructure) [![GoDoc](https://godoc.org/github.com/hectorj/mapstructure?status.svg)](https://godoc.org/github.com/hectorj/mapstructure/)
 
 mapstructure is a Go library for decoding generic map values to structures
 and vice versa, while providing helpful error handling.
