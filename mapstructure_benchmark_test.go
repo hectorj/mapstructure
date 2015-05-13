@@ -17,7 +17,7 @@ func Benchmark_Decode(b *testing.B) {
 		"age":    91,
 		"emails": []string{"one", "two", "three"},
 		"extra": map[string]string{
-			"twitter": "mitchellh",
+			"twitter": "hectorj",
 		},
 	}
 

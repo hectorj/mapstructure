@@ -16,12 +16,12 @@ structure.
 Standard `go get`:
 
 ```
-$ go get github.com/mitchellh/mapstructure
+$ go get github.com/hectorj/mapstructure
 ```
 
 ## Usage & Example
 
-For usage and examples see the [Godoc](http://godoc.org/github.com/mitchellh/mapstructure).
+For usage and examples see the [Godoc](http://godoc.org/github.com/hectorj/mapstructure).
 
 The `Decode` function has examples associated with it there.
 

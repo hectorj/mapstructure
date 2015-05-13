@@ -20,7 +20,7 @@ func ExampleDecode() {
 		"age":    91,
 		"emails": []string{"one", "two", "three"},
 		"extra": map[string]string{
-			"twitter": "mitchellh",
+			"twitter": "hectorj",
 		},
 	}
 
@@ -32,7 +32,7 @@ func ExampleDecode() {
 
 	fmt.Printf("%#v", result)
 	// Output:
-	// mapstructure.Person{Name:"Mitchell", Age:91, Emails:[]string{"one", "two", "three"}, Extra:map[string]string{"twitter":"mitchellh"}}
+	// mapstructure.Person{Name:"Mitchell", Age:91, Emails:[]string{"one", "two", "three"}, Extra:map[string]string{"twitter":"hectorj"}}
 }
 
 func ExampleDecode_errors() {
